@@ -19,8 +19,6 @@ export class EnrollmentEmployeeService {
 
     constructor(private http: Http) { }
 
-    
-
     addEnrollmentEmployee(firstName: string, lastName: string, salary: number, numberOfPayPeriods: number): Observable<any> {
        
         let enrollmentEmployeeUrl = 'http://localhost:5001/enroll'
