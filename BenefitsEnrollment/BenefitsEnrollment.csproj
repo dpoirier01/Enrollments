@@ -33,7 +33,6 @@
     <TypeScriptCompile Include="ClientApp\app\components\enrollment\enrollment-dependent\index.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\enrollment\enrollment-employee\enrollment-employee.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\enrollment\index.ts" />
-    <TypeScriptCompile Include="ClientApp\app\components\shared\DropdownMenu\dropdown.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\shared\header\header.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\shared\index.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\shared\models\dependent.model.ts" />
