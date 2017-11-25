@@ -1,0 +1,27 @@
+﻿<div>
+    <h1>Add Employee</h1>
+    <hr>
+    <div class="col-md-4">
+        <form [formGroup]="enrollmentEmployeeForm" (ngSubmit)="saveEnrollmentEmployee(enrollmentEmployeeForm.value)" autocomplete="off" novalidate>
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input formControlName="firstName" id="firstName" type="text" class="form-control" placeholder="First Name..." />
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input formControlName="lastName" id="lastName" type="text" class="form-control" placeholder="Last Name..." />
+            </div>
+            <div class="form-group">
+                <label for="lastName">Salary:</label>
+                <input formControlName="salary" id="salary" type="text" class="form-control" placeholder="Salary..." />
+            </div>
+            <div class="form-group">
+                <label for="lastName">Number of Pay Periods:</label>
+                <input formControlName="numberOfPayPeriods" id="numberOfPayPeriods" type="text" class="form-control" placeholder="Number of Pay Periods..." />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="button" class="btn btn-default" (click)="cancel()">Cancel</button>
+        </form>
+    </div>
+</div>

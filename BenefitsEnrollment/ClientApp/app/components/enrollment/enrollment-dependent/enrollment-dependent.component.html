@@ -1,0 +1,31 @@
+﻿<div>
+    <h1>Add Dependent</h1>
+    <hr>
+    <div class="col-md-4">
+        <form [formGroup]="enrollmentDependentForm" (ngSubmit)="saveEnrollmentDependent(enrollmentDependentForm.value)" autocomplete="off" novalidate>
+            
+            <div class="form-group">
+                <label for="employees">Current Employees:</label>
+                <select (change)="onChange($event.target.value)" id="employees" class="form-control">
+                    <option>Please choose Employee</option>
+                    <option *ngFor="let employee of employeeList">{{employee.firstName}} {{employee.lastName}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input formControlName="firstName" id="firstName" type="text" class="form-control" placeholder="First Name..." />
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input formControlName="lastName" id="lastName" type="text" class="form-control" placeholder="Last Name..." />
+            </div>
+            <div class="form-group">
+                <label for="lastName">Relationship:</label>
+                <input formControlName="relationship" id="relationship" type="text" class="form-control" placeholder="Relationship..." />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="button" class="btn btn-default" (click)="cancel()">Cancel</button>
+</form>
+    </div>
+</div>
