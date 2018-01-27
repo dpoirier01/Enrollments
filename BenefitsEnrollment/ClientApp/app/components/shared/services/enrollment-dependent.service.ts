@@ -27,6 +27,7 @@ export class EnrollmentDependentService {
         dependent.firstName = firstName;
         dependent.lastName = lastName;
         dependent.relationship = relationship;
+        dependent.employeeId = 2;
 
         let bodyString = JSON.stringify(dependent);
         let headers = new Headers({ 'Content-Type': 'application/json' });
@@ -47,7 +48,7 @@ export class EnrollmentDependentService {
         let errorMessage: string;
 
         errorMessage = error.message ? error.message : error.toString();
-
+        console.debug(errorMessage);
         // In real world application, call to log error to remote server
         // logError(error);
 

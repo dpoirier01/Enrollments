@@ -2,4 +2,5 @@
     firstName = '';
     lastName = '';
     relationship = '';
+    employeeId: number;
 }
