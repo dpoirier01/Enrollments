@@ -8,7 +8,7 @@
                 <label for="employees">Current Employees:</label>
                 <select (change)="onChange($event.target.value)" id="employees" class="form-control">
                     <option>Please choose Employee</option>
-                    <option *ngFor="let employee of employeeList">{{employee.firstName}} {{employee.lastName}}</option>
+                    <option *ngFor="let employee of employeeList" [value]="employee.id">{{employee.firstName}} {{employee.lastName}}</option>
                 </select>
             </div>
             <div class="form-group">

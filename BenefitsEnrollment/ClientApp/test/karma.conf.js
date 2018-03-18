@@ -9,15 +9,29 @@ module.exports = function (config) {
             '../../wwwroot/dist/vendor.js',
             './boot-tests.ts'
         ],
+        plugins: [
+            require('karma-jasmine'),
+            require('karma-chrome-launcher'),
+            require('karma-jasmine-html-reporter'), // click "Debug" in browser to see it
+            require('karma-htmlfile-reporter') // crashing w/ strange socket error
+        ],
         preprocessors: {
             './boot-tests.ts': ['webpack']
         },
-        reporters: ['progress'],
+        htmlReporter: {
+            // Open this file to see results in browser
+            outputFile: 'tests.html',
+
+            // Optional
+            pageTitle: 'Unit Tests',
+            subPageTitle: __dirname
+        },
+        reporters: ['html'],
         port: 9876,
         colors: true,
         logLevel: config.LOG_INFO,
         autoWatch: true,
-        browsers: ['Chrome'],
+        browsers: ['PhantomJS', 'Chrome'],
         mime: { 'application/javascript': ['ts','tsx'] },
         singleRun: false,
         webpack: require('../../webpack.config.js')().filter(config => config.target !== 'node'), // Test against client bundle, because tests run in a browser

@@ -10,7 +10,8 @@ import { EnrollmentEmployeeService } from '../../shared/services/enrollment-empl
     templateUrl: './enrollment-dependent.component.html'
 })
 export class EnrollmentDependentComponent implements OnInit {
-    enrollmentDependentForm: FormGroup
+    enrollmentDependentForm: FormGroup;
+    selectedEmployee: number;
 
     constructor(private router: Router, private enrollmentDependentService: EnrollmentDependentService, private EnrollmentEmployeeService: EnrollmentEmployeeService) {
 
@@ -32,8 +33,13 @@ export class EnrollmentDependentComponent implements OnInit {
         });
     }
 
+    onChange(employeeId: number) {
+        this.selectedEmployee = employeeId;
+    }
+    
     saveEnrollmentDependent(formValues: any) {
-        this.enrollmentDependentService.addEnrollmentDependent(formValues.firstName, formValues.lastName, formValues.relationship)
+        
+        this.enrollmentDependentService.addEnrollmentDependent(formValues.firstName, formValues.lastName, formValues.relationship, this.selectedEmployee)
             .subscribe(
             result => console.log(result)//,
             //error => this.errorMessage = <any>error

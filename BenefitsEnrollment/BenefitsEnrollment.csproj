@@ -21,15 +21,23 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\app\components\enrollment\enrollment-dependent\enrollment-dependent.component.spec.ts" />
     <None Remove="ClientApp\app\components\enrollment\enrollment-dependent\index.ts" />
     <None Remove="ClientApp\app\components\enrollment\index.ts" />
     <None Remove="ClientApp\app\components\shared\header\header.component.ts" />
     <None Remove="ClientApp\app\components\shared\index.ts" />
     <None Remove="ClientApp\app\components\shared\models\employee.model.ts" />
+    <None Remove="ClientApp\app\components\shared\services\enrollment-dependent.service.stub.ts" />
+    <None Remove="ClientApp\app\components\shared\services\enrollment-employee.service.spec.ts" />
+    <None Remove="ClientApp\app\components\shared\services\enrollment-employee.service.stub.ts" />
+    <None Remove="ClientApp\app\components\Summaries\benefits-summary\benefits-summary.component.html" />
+    <None Remove="ClientApp\app\components\Summaries\benefits-summary\benefits-summary.component.spec.ts" />
+    <None Remove="ClientApp\app\components\Summaries\benefits-summary\benefits-summary.component.ts" />
   </ItemGroup>
 
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\app\components\enrollment\enrollment-dependent\enrollment-dependent.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\enrollment\enrollment-dependent\enrollment-dependent.component.spec.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\enrollment\enrollment-dependent\index.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\enrollment\enrollment-employee\enrollment-employee.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\enrollment\index.ts" />
@@ -37,8 +45,14 @@
     <TypeScriptCompile Include="ClientApp\app\components\shared\index.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\shared\models\dependent.model.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\shared\models\employee.model.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\shared\services\enrollment-dependent.service.stub.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\shared\services\enrollment-employee.service.spec.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\shared\services\enrollment-dependent.service.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\shared\services\enrollment-employee.service.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\shared\services\enrollment-employee.service.stub.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\Summaries\benefits-summary\benefits-summary.component.spec.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\Summaries\benefits-summary\benefits-summary.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\Summaries\benefits-summary\benefits-summary.component.html" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

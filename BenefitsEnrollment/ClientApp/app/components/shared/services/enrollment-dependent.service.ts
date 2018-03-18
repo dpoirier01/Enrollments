@@ -21,13 +21,13 @@ export class EnrollmentDependentService {
 
     private enrollmentDependentUrl = 'http://localhost:5002/enroll'
 
-    addEnrollmentDependent(firstName: string, lastName: string, relationship: string): Observable<any> {
+    addEnrollmentDependent(firstName: string, lastName: string, relationship: string, employeeId: number): Observable<any> {
 
         let dependent = new Dependent();
         dependent.firstName = firstName;
         dependent.lastName = lastName;
         dependent.relationship = relationship;
-        dependent.employeeId = 2;
+        dependent.employeeId = employeeId;
 
         let bodyString = JSON.stringify(dependent);
         let headers = new Headers({ 'Content-Type': 'application/json' });

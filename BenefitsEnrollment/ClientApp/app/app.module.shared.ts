@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { EnrollmentEmployeeComponent } from './components/enrollment/enrollment-employee/enrollment-employee.component';
 import { EnrollmentDependentComponent } from './components/enrollment/enrollment-dependent/enrollment-dependent.component';
+import { BenefitsSummaryComponent } from './components/Summaries/benefits-summary/benefits-summary.component';
 
 // services
 import { EnrollmentEmployeeService } from './components/shared/services/enrollment-employee.service';
@@ -25,7 +26,8 @@ import { Dependent } from './components/shared/models/dependent.model';
         HomeComponent,
         HeaderComponent,
         EnrollmentEmployeeComponent,
-        EnrollmentDependentComponent
+        EnrollmentDependentComponent,
+        BenefitsSummaryComponent
     ],
     providers: [
         EnrollmentEmployeeService,
@@ -41,7 +43,8 @@ import { Dependent } from './components/shared/models/dependent.model';
             { path: 'home', component: HomeComponent },
             //{ path: '**', redirectTo: 'home' },
             { path: 'EnrollEmployee', component: EnrollmentEmployeeComponent },
-            { path: 'EnrollDependent', component: EnrollmentDependentComponent }
+            { path: 'EnrollDependent', component: EnrollmentDependentComponent },
+            { path: 'BenefitsSummary', component: BenefitsSummaryComponent }
         ])
     ]
 })
